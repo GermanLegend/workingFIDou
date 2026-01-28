@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Fichte - Der Eckpfeiler unserer Wälder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'spruce-green': '#1b3d2f',
+                        'needle-dark': '#2d5a27',
+                        'bark-grey': '#6d6d6d'
+                    },
+                    fontFamily: { 'sans': ['Inter', 'sans-serif'], 'serif': ['Merriweather', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-sm border-b-4 border-spruce-green">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-spruce-green font-serif">Wald-Portal</h1>
+            <div class="space-x-4">
+                <a href="buche.html" class="text-gray-600 hover:text-spruce-green">Buche</a>
+                <a href="douglasie.html" class="bg-spruce-green text-white px-4 py-2 rounded-lg hover:bg-needle-dark transition">Zur Douglasie →</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-spruce-green mb-4 font-serif">Die Gemeine Fichte</h2>
+                <p class="text-xl text-gray-600">Picea abies - Der wichtigste Wirtschaftsbaum Mitteleuropas</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl mb-12 border border-gray-100">
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                    Die Fichte ist der meistverbreitete Baum in deutschen Wäldern. Sie wächst schnell, ist anspruchslos und liefert das wichtigste Bauholz. Doch im Klimawandel gerät sie unter Druck.
+                </p>
+                
+                <div class="flex flex-col items-center bg-green-50 p-8 rounded-xl border-2 border-dashed border-spruce-green">
+                    <h3 class="text-xl font-bold text-spruce-green mb-2">Suchen Sie eine klimaresistente Alternative?</h3>
+                    <p class="text-gray-600 mb-6 text-center">Erfahren Sie, warum die Douglasie oft als Nachfolgerin der Fichte gehandelt wird.</p>
+                    <a href="douglasie.html" class="bg-spruce-green text-white text-xl font-bold py-4 px-10 rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
+                        Mehr über die Douglasie erfahren 🌲
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-bark-grey">
+                    <h4 class="font-bold text-lg mb-2">Vorteile</h4>
+                    <ul class="text-gray-600">
+                        <li>• Extrem schnelles Wachstum</li>
+                        <li>• Vielseitiges Nutzholz</li>
+                        <li>• Geringe Ansprüche an den Boden</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-400">
+                    <h4 class="font-bold text-lg mb-2">Risiken</h4>
+                    <ul class="text-gray-600">
+                        <li>• Flachwurzler (sturmanfällig)</li>
+                        <li>• Anfällig für Borkenkäfer</li>
+                        <li>• Geringe Trockenresistenz</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
