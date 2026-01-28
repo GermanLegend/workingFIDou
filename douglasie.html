@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglasie - Die Königin der Nadelbäume</title>
+    <meta name="description" content="Umfassende Informationen über die Douglasie: Eigenschaften, Funfacts, Daten, Stärken und Schwächen des beeindruckenden Nadelbaums">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'forest-green': '#2d5a27',
+                        'pine-green': '#3a7d34',
+                        'wood-brown': '#8b7355',
+                        'bark-dark': '#5d4037',
+                        'needle-green': '#4a7c59'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Merriweather', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .content-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .highlight-box {
+            border-left: 4px solid #3a7d34;
+            background-color: rgba(58, 125, 52, 0.05);
+        }
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-forest-green rounded-full"></div>
+                    <h1 class="text-2xl font-bold text-bark-dark">Douglasie</h1>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#info" class="text-wood-brown hover:text-forest-green font-medium transition-colors duration-200" onclick="event.preventDefault(); document.getElementById('info').scrollIntoView({behavior: 'smooth'}); return false;">Informationen</a>
+                    <a href="#facts" class="text-wood-brown hover:text-forest-green font-medium transition-colors duration-200" onclick="event.preventDefault(); document.getElementById('facts').scrollIntoView({behavior: 'smooth'}); return false;">Funfacts</a>
+                    <a href="#data" class="text-wood-brown hover:text-forest-green font-medium transition-colors duration-200" onclick="event.preventDefault(); document.getElementById('data').scrollIntoView({behavior: 'smooth'}); return false;">Daten</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://picsum.photos/1920/600?random=1" 
+                alt="Douglasienwald im Sonnenlicht" 
+                class="w-full h-full object-cover opacity-30"
+                loading="lazy"
+            />
+        </div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-bark-dark mb-4 font-serif">Die Douglasie</h1>
+                <p class="text-xl text-gray-700 mb-8">Pseudotsuga menziesii - Ein außergewöhnlicher Nadelbaum mit faszinierenden Eigenschaften</p>
+                <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+                    <span class="text-forest-green font-semibold">🌲 Wissenswertes über einen besonderen Baum</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Informationsabschnitt -->
+            <section id="info" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Umfassende Informationen</h2>
+                </div>
+                
+                <div class="content-section rounded-2xl p-8 mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Die <strong class="text-forest-green">Douglasie (Pseudotsuga menziesii)</strong>, auch Douglasfichte oder Douglastanne genannt, ist eine der beeindruckendsten und wirtschaftlich bedeutendsten Nadelbaumarten weltweit. Ursprünglich in Nordamerika beheimatet, wurde sie im 19. Jahrhundert nach Europa eingeführt und hat sich hier als wertvolle Forstbaumart etabliert.
+                    </p>
+                    
+                    <div class="highlight-box p-6 mb-6">
+                        <h3 class="text-xl font-bold text-bark-dark mb-3">Beschreibung & Eigenschaften</h3>
+                        <p class="text-gray-700 mb-4">
+                            Die Douglasie zeichnet sich durch ihren <strong class="text-pine-green">geraden, säulenförmigen Wuchs</strong> aus und kann unter optimalen Bedingungen Höhen von über 60 Metern erreichen. Ihre Rinde ist im Jugendstadium glatt und grau, entwickelt sich im Alter zu einer dicken, korkigen Borke mit tiefen Furchen. Die Nadeln sind weich, etwa 2-3 cm lang und duften aromatisch nach Zitrone, wenn man sie zerreibt.
+                        </p>
+                        <p class="text-gray-700">
+                            Die Zapfen der Douglasie sind mit ihren charakteristischen <strong class="text-pine-green">dreizackigen Deckschuppen</strong> ein unverwechselbares Merkmal. Das Holz der Douglasie ist von gelblich-brauner bis rötlicher Farbe, besitzt eine ausgezeichnete Festigkeit und ist sowohl für Konstruktionszwecke als auch für Möbelherstellung sehr geschätzt.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="stat-card bg-white p-6 rounded-xl shadow-md">
+                            <h4 class="text-lg font-bold text-bark-dark mb-3">🌱 Wachstum & Entwicklung</h4>
+                            <p class="text-gray-700">
+                                Die Douglasie ist eine <strong class="text-pine-green">lichtbedürftige Baumart</strong> mit schnellem Jugendwachstum. In ihren ersten 20 Jahren kann sie jährlich bis zu einem Meter an Höhe zulegen. Sie bevorzugt tiefgründige, gut durchlüftete Böden und verträgt sowohl Sommerhitze als auch Winterkälte gut.
+                            </p>
+                        </div>
+                        <div class="stat-card bg-white p-6 rounded-xl shadow-md">
+                            <h4 class="text-lg font-bold text-bark-dark mb-3">🔄 Ökologische Funktion</h4>
+                            <p class="text-gray-700">
+                                Als <strong class="text-pine-green">Mischbaumart</strong> bereichert die Douglasie heimische Wälder und erhöht deren Stabilität. Ihr tiefreichendes Wurzelsystem macht sie sturmfester als viele andere Nadelbäume. Die Douglasie bietet Lebensraum für verschiedene Tierarten und trägt zur Biodiversität bei.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Funfacts Section -->
+            <section id="facts" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Faszinierende Funfacts</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">🌍</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Namensherkunft</h4>
+                        <p class="text-gray-700">
+                            Benannt nach dem schottischen Botaniker <strong>David Douglas</strong>, der die Art 1827 nach Europa brachte. Die Ureinwohner Nordamerikas nannten sie "Oregon Pine".
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">📏</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Rekordhalter</h4>
+                        <p class="text-gray-700">
+                            Die höchste bekannte Douglasie steht in den USA und misst <strong>über 100 Meter</strong> - damit gehört sie zu den höchsten Bäumen der Welt.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">👃</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Aromatische Nadeln</h4>
+                        <p class="text-gray-700">
+                            Zerreibt man Douglasiennadeln, verströmen sie einen intensiven <strong>Zitronen-Orangen-Duft</strong>, der sie von anderen Nadelbäumen unterscheidet.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">🕰️</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Langlebigkeit</h4>
+                        <p class="text-gray-700">
+                            Douglasien können bis zu <strong>1000 Jahre alt</strong> werden. In ihrem natürlichen Verbreitungsgebiet gibt es Exemplare, die bereits vor Kolumbus' Amerika-Entdeckung keimten.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">🛡️</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Feuerresistenz</h4>
+                        <p class="text-gray-700">
+                            Die dicke Borke älterer Douglasien bietet einen gewissen <strong>Feuerschutz</strong> und ermöglicht es ihnen, Waldbrände besser zu überstehen als andere Baumarten.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-forest-green text-2xl mb-3">🌲</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Weihnachtsbaum-Alternative</h4>
+                        <p class="text-gray-700">
+                            In Nordamerika ist die Douglasie ein <strong>beliebter Weihnachtsbaum</strong> wegen ihres vollen Wuchses und des angenehmen Duftes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daten & Parameter Section -->
+            <section id="data" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Technische Daten & Parameter</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-bark-dark mb-6 font-serif">Wachstumsparameter</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Maximale Höhe:</span>
+                                    <span class="font-bold text-forest-green">60-100 m</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Stammdurchmesser:</span>
+                                    <span class="font-bold text-forest-green">1,5-2,5 m</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Jährl. Höhenzuwachs:</span>
+                                    <span class="font-bold text-forest-green">bis zu 1 m</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Lebensdauer:</span>
+                                    <span class="font-bold text-forest-green">400-1000 Jahre</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Nadellänge:</span>
+                                    <span class="font-bold text-forest-green">2-3 cm</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-8">
+                            <h3 class="text-2xl font-bold text-bark-dark mb-6 font-serif">Holzeigenschaften</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Rohdichte:</span>
+                                    <span class="font-bold text-forest-green">470 kg/m³</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Biegefestigkeit:</span>
+                                    <span class="font-bold text-forest-green">85 N/mm²</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Druckfestigkeit:</span>
+                                    <span class="font-bold text-forest-green">45 N/mm²</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Elastizitätsmodul:</span>
+                                    <span class="font-bold text-forest-green">13.000 N/mm²</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-3 border-b">
+                                    <span class="text-gray-700">Dauerhaftigkeitsklasse:</span>
+                                    <span class="font-bold text-forest-green">3-4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stärken & Schwächen -->
+            <section class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Stärken & Schwächen</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-forest-green text-xl">✓</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-bark-dark">Stärken</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-forest-green mr-3">•</span>
+                                <span class="text-gray-700"><strong>Schnelles Wachstum:</strong> Hohe Holzproduktion in kurzer Zeit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-forest-green mr-3">•</span>
+                                <span class="text-gray-700"><strong>Sturmfestigkeit:</strong> Tiefes Wurzelsystem erhöht die Standfestigkeit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-forest-green mr-3">•</span>
+                                <span class="text-gray-700"><strong>Wertvolles Holz:</strong> Hervorragende technische Eigenschaften für Bau und Möbel</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-forest-green mr-3">•</span>
+                                <span class="text-gray-700"><strong>Klimaresilienz:</strong> Gute Anpassung an Trockenheit und Klimawandel</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-forest-green mr-3">•</span>
+                                <span class="text-gray-700"><strong>Naturverjüngung:</strong> Gute natürliche Verjüngungsfähigkeit</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-red-600 text-xl">⚠</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-bark-dark">Schwächen & Risiken</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-red-600 mr-3">•</span>
+                                <span class="text-gray-700"><strong>Spätfrostempfindlichkeit:</strong> Junge Triebe können durch Spätfröste geschädigt werden</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-600 mr-3">•</span>
+                                <span class="text-gray-700"><strong>Rüsselkäferbefall:</strong> Gefährdung durch den Großen Braunen Rüsselkäfer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-600 mr-3">•</span>
+                                <span class="text-gray-700"><strong>Bodenansprüche:</strong> Benötigt tiefgründige, frische bis mäßig frische Böden</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-600 mr-3">•</span>
+                                <span class="text-gray-700"><strong>Konkurrenzfähigkeit:</strong> In der Jugendphase konkurrenzschwach gegen schnellwüchsige Pflanzen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-600 mr-3">•</span>
+                                <span class="text-gray-700"><strong>Nicht heimisch:</strong> In Europa nicht ursprünglich beheimatet</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abschließender Infotext -->
+            <section class="mb-16">
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl border border-green-200">
+                    <h3 class="text-2xl font-bold text-bark-dark mb-6 font-serif text-center">Fazit & Bedeutung</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Die Douglasie stellt eine <strong class="text-forest-green">wertvolle Bereicherung</strong> für den mitteleuropäischen Waldbau dar. Ihre außergewöhnlichen Wuchseigenschaften, die hohe Qualität ihres Holzes und ihre relative Widerstandsfähigkeit gegen biotische und abiotische Schadfaktoren machen sie zu einer interessanten Alternative zu heimischen Nadelbaumarten.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Als <strong class="text-forest-green">Nicht-Heimische Baumart</strong> erfordert ihr Anbau jedoch besondere Sorgfalt und forstliches Know-how. Die richtige Standortwahl, angepasste Pflegemaßnahmen und eine verantwortungsvolle Integration in bestehende Waldökosysteme sind entscheidend für den erfolgreichen Anbau dieser beeindruckenden Baumart.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-bark-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                <span class="text-white">🌲</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Douglasie Informationsportal</h3>
+                        </div>
+                        <p class="text-gray-300 max-w-md">
+                            Eine umfassende Informationsquelle über die Douglasie (Pseudotsuga menziesii) - ihre Eigenschaften, Bedeutung und ökologische Rolle.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-300 mb-2">Botanischer Name: Pseudotsuga menziesii</p>
+                        <p class="text-gray-300">Familie: Kieferngewächse (Pinaceae)</p>
+                    </div>
+                </div>
+                
+                <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                    <p class="text-gray-400">
+                        Diese Seite dient informativen Zwecken. Für forstliche Entscheidungen konsultieren Sie bitte Fachleute.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Stat Cards Animation
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '';
+            });
+        });
+
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // Daten für die Website
+        const douglasieData = {
+            "name": "Douglasie",
+            "wissenschaftlicherName": "Pseudotsuga menziesii",
+            "familie": "Pinaceae (Kieferngewächse)",
+            "ursprung": "Nordamerika (Westküste)",
+            "einfuhrEuropa": "1827 durch David Douglas",
+            "maxAlter": "1000 Jahre",
+            "maxHoehe": "100 Meter",
+            "holzFarbe": "Gelblich-braun bis rötlich",
+            "verwendung": [
+                "Konstruktionsholz",
+                "Möbelbau",
+                "Fassadenverkleidung",
+                "Bodenbeläge",
+                "Schiffsbau"
+            ],
+            "klimazonen": [
+                "Gemäßigte Zone",
+                "Mediterrane Zone",
+                "Kontinentale Zone"
+            ]
+        };
+
+        // Funktion zur Anzeige von Tooltips
+        function showTooltip(element, text) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'fixed bg-gray-800 text-white px-3 py-2 rounded-lg text-sm z-50';
+            tooltip.textContent = text;
+            document.body.appendChild(tooltip);
+            
+            const rect = element.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + window.scrollX}px`;
+            tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
+            
+            setTimeout(() => {
+                tooltip.remove();
+            }, 2000);
+        }
+
+        // Highlight wichtige Begriffe
+        document.addEventListener('DOMContentLoaded', function() {
+            const importantTerms = document.querySelectorAll('strong');
+            importantTerms.forEach(term => {
+                term.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'rgba(58, 125, 52, 0.1)';
+                    this.style.padding = '2px 4px';
+                    this.style.borderRadius = '3px';
+                    this.style.transition = 'background-color 0.2s';
+                });
+                
+                term.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                    this.style.padding = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
