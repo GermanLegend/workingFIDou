@@ -1,77 +1,168 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Fichte - Der Eckpfeiler unserer Wälder</title>
+    <title>Die Fichte - Der Brotbaum des Waldes</title>
+    <meta name="description" content="Umfassende Informationen über die Gemeine Fichte: Merkmale, Funfacts, technische Daten und ihre Rolle im Klimawandel.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'spruce-green': '#1b3d2f',
-                        'needle-dark': '#2d5a27',
-                        'bark-grey': '#6d6d6d'
+                        'forest-green': '#1b3d2f',
+                        'pine-green': '#2d5a27',
+                        'wood-brown': '#8b7355',
+                        'bark-dark': '#4a4a4a',
+                        'needle-green': '#3d633d'
                     },
-                    fontFamily: { 'sans': ['Inter', 'sans-serif'], 'serif': ['Merriweather', 'serif'] }
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Merriweather', 'Georgia', 'serif']
+                    }
                 }
             }
         }
     </script>
+    <style>
+        .content-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .highlight-box { border-left: 4px solid #1b3d2f; background-color: rgba(27, 61, 47, 0.05); }
+        .stat-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans">
-    <header class="bg-white shadow-sm border-b-4 border-spruce-green">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-spruce-green font-serif">Wald-Portal</h1>
-            <div class="space-x-4">
-                <a href="buche.html" class="text-gray-600 hover:text-spruce-green">Buche</a>
-                <a href="douglasie.html" class="bg-spruce-green text-white px-4 py-2 rounded-lg hover:bg-needle-dark transition">Zur Douglasie →</a>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-forest-green rounded-full"></div>
+                    <h1 class="text-2xl font-bold text-bark-dark">Wald-Portal</h1>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#info" class="text-wood-brown hover:text-forest-green font-medium transition-colors">Informationen</a>
+                    <a href="#facts" class="text-wood-brown hover:text-forest-green font-medium transition-colors">Funfacts</a>
+                    <a href="#data" class="text-wood-brown hover:text-forest-green font-medium transition-colors">Daten</a>
+                    <a href="douglasie.html" class="bg-forest-green text-white px-4 py-1 rounded-full hover:bg-pine-green transition shadow-md">Douglasie →</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold text-spruce-green mb-4 font-serif">Die Gemeine Fichte</h2>
-                <p class="text-xl text-gray-600">Picea abies - Der wichtigste Wirtschaftsbaum Mitteleuropas</p>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-xl mb-12 border border-gray-100">
-                <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                    Die Fichte ist der meistverbreitete Baum in deutschen Wäldern. Sie wächst schnell, ist anspruchslos und liefert das wichtigste Bauholz. Doch im Klimawandel gerät sie unter Druck.
-                </p>
-                
-                <div class="flex flex-col items-center bg-green-50 p-8 rounded-xl border-2 border-dashed border-spruce-green">
-                    <h3 class="text-xl font-bold text-spruce-green mb-2">Suchen Sie eine klimaresistente Alternative?</h3>
-                    <p class="text-gray-600 mb-6 text-center">Erfahren Sie, warum die Douglasie oft als Nachfolgerin der Fichte gehandelt wird.</p>
-                    <a href="douglasie.html" class="bg-spruce-green text-white text-xl font-bold py-4 px-10 rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
-                        Mehr über die Douglasie erfahren 🌲
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-bark-grey">
-                    <h4 class="font-bold text-lg mb-2">Vorteile</h4>
-                    <ul class="text-gray-600">
-                        <li>• Extrem schnelles Wachstum</li>
-                        <li>• Vielseitiges Nutzholz</li>
-                        <li>• Geringe Ansprüche an den Boden</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-400">
-                    <h4 class="font-bold text-lg mb-2">Risiken</h4>
-                    <ul class="text-gray-600">
-                        <li>• Flachwurzler (sturmanfällig)</li>
-                        <li>• Anfällig für Borkenkäfer</li>
-                        <li>• Geringe Trockenresistenz</li>
-                    </ul>
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://picsum.photos/1920/600?random=10" alt="Fichtenwald" class="w-full h-full object-cover opacity-30" loading="lazy" />
+        </div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-bark-dark mb-4 font-serif">Die Fichte</h1>
+                <p class="text-xl text-gray-700 mb-8">Picea abies - Das ökonomische Rückgrat der Forstwirtschaft</p>
+                <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+                    <span class="text-forest-green font-semibold">🌲 Der meistverbreitete Nadelbaum Deutschlands</span>
                 </div>
             </div>
         </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            
+            <section id="info" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Umfassende Informationen</h2>
+                </div>
+                
+                <div class="content-section rounded-2xl p-8 mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Die <strong class="text-forest-green">Gemeine Fichte (Picea abies)</strong>, oft fälschlicherweise als "Rottanne" bezeichnet, ist der wichtigste Wirtschaftsbaum Mitteleuropas. Sie prägt das Landschaftsbild vieler Mittelgebirge und ist aufgrund ihres schnellen Wachstums und der hervorragenden Holzeigenschaften die Basis der Holzindustrie.
+                    </p>
+                    
+                    <div class="highlight-box p-6 mb-6">
+                        <h3 class="text-xl font-bold text-bark-dark mb-3">Beschreibung & Eigenschaften</h3>
+                        <p class="text-gray-700 mb-4">
+                            Die Fichte ist ein <strong class="text-pine-green">immergrüner Nadelbaum</strong>, der eine kegelförmige Krone ausbildet. Ihre Rinde ist rötlich-braun und schuppig. Ein markantes Merkmal sind die hängenden Zapfen, die im Ganzen abfallen. Die Nadeln sind ringsum angeordnet, vierkantig und spitz ("Fichte sticht").
+                        </p>
+                    </div>
+
+                    <div class="bg-white border-2 border-forest-green rounded-xl p-6 text-center shadow-inner">
+                        <h3 class="text-xl font-bold text-forest-green mb-2">Die Fichte im Klimawandel</h3>
+                        <p class="text-gray-600 mb-4">Aufgrund von Trockenheit und Borkenkäfer braucht der Wald Alternativen.</p>
+                        <a href="douglasie.html" class="inline-block bg-forest-green text-white font-bold py-3 px-8 rounded-full hover:bg-pine-green transition-transform hover:scale-105 shadow-lg">
+                            Klimaresistente Douglasie ansehen →
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="facts" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Faszinierende Funfacts</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md stat-card">
+                        <div class="text-forest-green text-2xl mb-3">🎻</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Resonanzholz</h4>
+                        <p class="text-gray-700">Langsam gewachsene Bergfichten liefern das beste Holz für den Bau von Violinen und Gitarren (Resonanzböden).</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md stat-card">
+                        <div class="text-forest-green text-2xl mb-3">💧</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Flachwurzler</h4>
+                        <p class="text-gray-700">Fichten wurzeln sehr flach (Tellerwurzel). Das macht sie extrem anfällig für Stürme und Trockenperioden.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md stat-card">
+                        <div class="text-forest-green text-2xl mb-3">🎄</div>
+                        <h4 class="text-lg font-bold text-bark-dark mb-2">Weihnachts-Klassiker</h4>
+                        <p class="text-gray-700">Früher war sie der Standard-Weihnachtsbaum, wird heute aber oft von der Nordmanntanne verdrängt.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="data" class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-forest-green mr-4"></div>
+                    <h2 class="text-3xl font-bold text-bark-dark font-serif">Technische Daten & Parameter</h2>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-bark-dark mb-6 font-serif">Wachstumsparameter</h3>
+                        <div class="space-y-4 text-gray-700">
+                            <div class="flex justify-between border-b pb-2"><span>Maximale Höhe:</span><span class="font-bold text-forest-green">40-50 m</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Stammdurchmesser:</span><span class="font-bold text-forest-green">bis 1,5 m</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Lebensdauer:</span><span class="font-bold text-forest-green">200-600 Jahre</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Hiebreife:</span><span class="font-bold text-forest-green">80-100 Jahre</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 text-gray-700">
+                        <h3 class="text-2xl font-bold text-bark-dark mb-6 font-serif">Holzeigenschaften</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between border-b pb-2"><span>Rohdichte:</span><span class="font-bold text-forest-green">460 kg/m³</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Biegefestigkeit:</span><span class="font-bold text-forest-green">78 N/mm²</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Druckfestigkeit:</span><span class="font-bold text-forest-green">50 N/mm²</span></div>
+                            <div class="flex justify-between border-b pb-2"><span>Dauerhaftigkeit:</span><span class="font-bold text-forest-green">Klasse 4</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <footer class="bg-bark-dark text-white py-8 text-center">
+        <p>Wald-Portal - Fokus auf nachhaltige Forstwirtschaft</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
