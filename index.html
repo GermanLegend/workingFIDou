@@ -1,19 +1,3 @@
-<section class="container mx-auto px-6 mt-12">
-    <div class="bg-white p-8 rounded-[2rem] shadow-xl border-2 border-timber/20 text-center">
-        <h3 class="text-2xl font-black text-spruce-deep mb-6 uppercase tracking-wider">Archiv-Navigation</h3>
-        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <a href="buche.html" class="w-full md:w-auto px-8 py-3 bg-beech-leaf text-white rounded-xl font-bold hover:bg-green-800 transition shadow-md flex items-center justify-center">
-                <span class="mr-2">🍃</span> Die Rotbuche
-            </a>
-            <a href="douglasie.html" class="w-full md:w-auto px-8 py-3 bg-timber text-spruce-deep rounded-xl font-bold hover:bg-opacity-80 transition shadow-md flex items-center justify-center">
-                <span class="mr-2">🌲</span> Die Douglasie
-            </a>
-            <a href="pockholz.html" class="w-full md:w-auto px-8 py-3 bg-amber-900 text-white rounded-xl font-bold hover:bg-black transition shadow-md flex items-center justify-center border-2 border-amber-600">
-                <span class="mr-2">🪵</span> Das Pockholz
-            </a>
-        </div>
-    </div>
-</section>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -30,7 +14,8 @@
                         'spruce-deep': '#0e241c',
                         'spruce-light': '#2d5a27',
                         'timber': '#a68a64',
-                        'bark': '#4a3f35'
+                        'bark': '#4a3f35',
+                        'beech-leaf': '#4a7c44'
                     },
                     fontFamily: { 'sans': ['Inter', 'sans-serif'], 'serif': ['Merriweather', 'serif'] }
                 }
@@ -38,7 +23,6 @@
         }
     </script>
     <style>
-        .map-container { filter: sepia(20%) saturate(120%) hue-rotate(80deg); }
         .gradient-bg { background: linear-gradient(180deg, #ffffff 0%, #f0f4f0 100%); }
     </style>
 </head>
@@ -46,104 +30,66 @@
 
     <nav class="sticky top-0 z-50 bg-spruce-deep text-white shadow-2xl">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-black tracking-tighter uppercase">Fichten-Archiv v2.0</span>
-            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
-                <a href="#vorkommen" class="hover:text-timber transition">Vorkommen</a>
-                <a href="#morphologie" class="hover:text-timber transition">Morphologie</a>
-                <a href="#funktion" class="hover:text-timber transition">Ökologie</a>
-                <a href="buche.html" class="hover:text-timber transition font-bold text-orange-400">Zur Buche</a>
-                <a href="douglasie.html" class="bg-timber text-spruce-deep px-5 py-2 rounded-full hover:bg-white transition">Douglasie →</a>
+            <span class="text-xl font-black tracking-tighter uppercase">Fichten-Archiv v2.1</span>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-timber">
+                <span>Dendrologie-Portal</span>
             </div>
         </div>
     </nav>
 
-    <header class="relative py-24 bg-spruce-deep overflow-hidden">
+    <header class="relative py-20 bg-spruce-deep overflow-hidden">
         <div class="absolute inset-0 opacity-20 flex justify-center items-center">
-            <span class="text-[20rem] font-black text-white select-none italic">PICEA</span>
+            <span class="text-[15rem] font-black text-white select-none italic">PICEA</span>
         </div>
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h1 class="text-6xl md:text-8xl font-black text-white mb-6 font-serif">Die Fichte</h1>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 font-serif">Die Fichte</h1>
             <p class="text-timber text-2xl font-light italic max-w-3xl mx-auto">
-                Vom "Brotbaum" zum Sorgenkind: Eine tiefgreifende Analyse der Picea abies im europäischen Kontext.
+                Analyse der Picea abies im europäischen Kontext.
             </p>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-12">
         
-        <div class="mb-16 flex justify-center">
-            <a href="buche.html" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-gray-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-green-800 shadow-lg">
-                <span class="mr-3 text-2xl">🍃</span> ZUR ROTBUCHE WECHSELN
-            </a>
-        </div>
+        <section class="mb-20">
+            <div class="bg-white p-10 rounded-[3rem] shadow-2xl border-2 border-timber/20">
+                <h3 class="text-center text-2xl font-black text-spruce-deep mb-8 uppercase tracking-widest">Verfügbare Baum-Dossiers</h3>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    
+                    <a href="buche.html" id="beech-link" class="w-full md:w-48 py-4 bg-beech-leaf text-white rounded-2xl font-bold hover:scale-105 transition-all shadow-lg flex flex-col items-center">
+                        <span class="text-2xl mb-1">🍃</span>
+                        <span>Rotbuche</span>
+                    </a>
+
+                    <a href="douglasie.html" class="w-full md:w-48 py-4 bg-timber text-spruce-deep rounded-2xl font-bold hover:scale-105 transition-all shadow-lg flex flex-col items-center">
+                        <span class="text-2xl mb-1">🌲</span>
+                        <span>Douglasie</span>
+                    </a>
+
+                    <a href="pockholz.html" class="w-full md:w-48 py-4 bg-amber-900 text-white rounded-2xl font-bold hover:scale-105 transition-all shadow-lg flex flex-col items-center border-2 border-amber-500">
+                        <span class="text-2xl mb-1">🪵</span>
+                        <span>Pockholz</span>
+                    </a>
+
+                </div>
+                <p class="text-center text-gray-400 text-xs mt-6 italic">Klicke auf ein Dossier, um die Datenbank zu laden.</p>
+            </div>
+        </section>
 
         <section id="vorkommen" class="mb-24">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-black text-spruce-deep mb-8 border-b-4 border-timber pb-2 inline-block font-serif">Geografische Distribution</h2>
-                    <p class="text-lg mb-6">
-                        Die Gemeine Fichte ist über weite Teile <strong class="text-spruce-light">Nord-, Mittel- und Osteuropas</strong> verbreitet. Ihr natürliches Areal reicht von den Alpen bis weit über den Polarkreis in Skandinavien und bis in den Ural.
+                    <h2 class="text-4xl font-black text-spruce-deep mb-8 border-b-4 border-timber pb-2 inline-block font-serif">Distribution</h2>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        Die Gemeine Fichte ist über weite Teile <strong class="text-spruce-light">Nord-, Mittel- und Osteuropas</strong> verbreitet. Ihr natürliches Areal reicht von den Alpen bis zum Polarkreis.
                     </p>
                     <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-timber">
                         <h4 class="font-bold mb-2">Höhenverbreitung:</h4>
-                        <p class="italic text-gray-600">In den Alpen bildet sie die Waldgrenze bei ca. 2.000m. Im Flachland kommt sie natürlich kaum vor, wurde dort aber durch den Menschen massiv in Monokulturen gepflanzt.</p>
+                        <p class="italic text-gray-600">In den Alpen bildet sie die Waldgrenze bei ca. 2.000m.</p>
                     </div>
                 </div>
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-timber to-spruce-light rounded-2xl blur opacity-25 group-hover:opacity-50 transition"></div>
-                    <div class="relative bg-white p-4 rounded-2xl shadow-2xl">
-                        <p class="text-xs text-center mt-4 text-gray-400 uppercase tracking-widest">Abbildung 1.1: Natürliches Verbreitungsgebiet</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="morphologie" class="mb-24">
-            <h2 class="text-4xl font-black text-spruce-deep mb-12 text-center font-serif">Morphologische Merkmale</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-bark">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><span class="bg-bark text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">01</span> Habitus</h3>
-                    <p class="text-gray-700">Im Freistand kegelförmig bis zum Boden beastet. Im Bestand schmal-kronig mit astfreiem Schaft. Die Äste sind etagenweise angeordnet.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-spruce-light">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><span class="bg-spruce-light text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">02</span> Nadeln & Zweige</h3>
-                    <p class="text-gray-700">Nadeln sind 1-2 cm lang, vierkantig und spitz ("Fichte sticht"). Sie sitzen auf kleinen verholzten Stielchen, die nach dem Abfallen den Zweig rau machen.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-timber">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><span class="bg-timber text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">03</span> Zapfen</h3>
-                    <p class="text-gray-700">Hängende Zapfen, 10-15 cm lang. Sie fallen im Ganzen ab (Unterschied zur Tanne, deren Zapfen aufrecht stehen und zerfallen).</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="funktion" class="mb-24 bg-spruce-deep text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-4xl font-black mb-10 font-serif">Funktion im Ökosystem</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="text-timber text-3xl">✔</div>
-                            <div>
-                                <h4 class="text-xl font-bold">Bodenschutz & Wasser</h4>
-                                <p class="text-gray-400">In Gebirgslagen schützt die Fichte vor Erosion und Lawinen. Sie reguliert den Wasserhaushalt, neigt aber zur Bodenversauerung durch schwer zersetzbare Nadelstreu.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 border-t border-white/10 pt-6">
-                            <div class="text-timber text-3xl">✔</div>
-                            <div>
-                                <h4 class="text-xl font-bold">Kohlenstoffspeicher</h4>
-                                <p class="text-gray-400">Aufgrund ihres schnellen Wachstums bindet die Fichte in jungen Jahren enorme Mengen an CO2 aus der Atmosphäre.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/20">
-                        <h4 class="text-2xl font-bold mb-4 text-timber">Klimawandel-Prognose</h4>
-                        <p class="mb-4">Die Fichte ist der "Verlierer" der Klimaerwärmung in tiefen Lagen. Der Flachwurzler erreicht bei Dürre kein Tiefenwasser.</p>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div class="bg-red-500 h-full w-[85%]"></div>
-                        </div>
-                        <p class="text-sm mt-2 text-red-400 font-bold uppercase">Gefährdungsgrad: Kritisch (in Lagen unter 600m)</p>
-                    </div>
+                <div class="bg-gray-200 h-64 rounded-[2rem] flex items-center justify-center border-4 border-dashed border-gray-300">
+                    <span class="text-gray-400 italic">[Karte: Picea Abies Verbreitung]</span>
                 </div>
             </div>
         </section>
@@ -152,61 +98,28 @@
             <h2 class="text-4xl font-black text-spruce-deep mb-12 font-serif">Technisches Profil</h2>
             <div class="overflow-x-auto bg-white rounded-3xl shadow-xl">
                 <table class="w-full text-left">
-                    <thead>
-                        <tr class="bg-gray-100 border-b-2 border-timber">
-                            <th class="p-6 font-black uppercase tracking-widest text-sm">Parameter</th>
-                            <th class="p-6 font-black uppercase tracking-widest text-sm">Spezifikation</th>
-                            <th class="p-6 font-black uppercase tracking-widest text-sm">Anmerkung</th>
-                        </tr>
-                    </thead>
                     <tbody class="divide-y divide-gray-100">
-                        <tr><td class="p-6 font-bold">Lateinischer Name</td><td class="p-6">Picea abies (L.) H.Karst.</td><td class="p-6 text-gray-500 italic">Synonym: Picea excelsa</td></tr>
-                        <tr><td class="p-6 font-bold">Wuchshöhe</td><td class="p-6">30 – 50 (max. 62) Meter</td><td class="p-6 text-gray-500 italic">Größter Baum Europas</td></tr>
-                        <tr><td class="p-6 font-bold">Wurzelsystem</td><td class="p-6">Flachwurzelsystem (Senkerwurzeln selten)</td><td class="p-6 text-red-600 font-bold">Sturmanfällig!</td></tr>
-                        <tr><td class="p-6 font-bold">Holzdichte (12%)</td><td class="p-6">~ 470 kg/m³</td><td class="p-6 text-gray-500 italic">Leichtes, elastisches Bauholz</td></tr>
-                        <tr><td class="p-6 font-bold">pH-Wert Boden</td><td class="p-6">Sauer bis mäßig sauer (pH 3,5 - 5)</td><td class="p-6 text-gray-500 italic">Bevorzugt frische Böden</td></tr>
+                        <tr><td class="p-6 font-bold">Lateinischer Name</td><td class="p-6">Picea abies (L.) H.Karst.</td></tr>
+                        <tr><td class="p-6 font-bold">Wuchshöhe</td><td class="p-6">30 – 50 Meter</td></tr>
+                        <tr><td class="p-6 font-bold">Wurzelsystem</td><td class="p-6 text-red-600 font-bold">Flachwurzler (Sturmanfällig)</td></tr>
+                        <tr><td class="p-6 font-bold">Holzdichte (12%)</td><td class="p-6">~ 470 kg/m³</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <div class="text-center py-16 bg-timber/10 rounded-[4rem] border-4 border-dashed border-timber">
-            <h3 class="text-3xl font-black text-spruce-deep mb-4 uppercase">Vergleich mit der Alternative</h3>
-            <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Die Douglasie gilt oft als Nachfolgerin der Fichte in Zeiten der Erwärmung.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="douglasie.html" class="inline-block bg-spruce-deep text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition">
-                    DOUGLASIEN-DOSSIER
-                </a>
-                <a href="buche.html" class="inline-block bg-beech-leaf bg-green-700 text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition">
-                    ZUR ROTBUCHE
-                </a>
-            </div>
-        </div>
-
     </main>
 
-    <footer class="bg-spruce-deep text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-4 mb-6">
-                <div class="w-12 h-1 bg-timber"></div>
-                <div class="w-12 h-1 bg-timber"></div>
-                <div class="w-12 h-1 bg-timber"></div>
-            </div>
-            <p class="text-sm text-gray-400 uppercase tracking-[0.3em]">© 2024 Forst-Datenbank-Zentrum | Picea Section</p>
-        </div>
+    <footer class="bg-spruce-deep text-white py-12 text-center">
+        <p class="text-sm text-gray-400 uppercase tracking-[0.3em]">© 2024 Forst-Datenbank-Zentrum</p>
     </footer>
 
     <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        document.getElementById('beech-link').addEventListener('click', function() {
+            // Öffnet den Rickroll im Hintergrund/neuen Tab
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
         });
     </script>
+
 </body>
 </html>
