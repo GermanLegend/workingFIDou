@@ -35,6 +35,7 @@
                 <a href="#vorkommen" class="hover:text-timber transition">Vorkommen</a>
                 <a href="#morphologie" class="hover:text-timber transition">Morphologie</a>
                 <a href="#funktion" class="hover:text-timber transition">Ökologie</a>
+                <a href="buche.html" class="hover:text-timber transition font-bold text-orange-400">Zur Buche</a>
                 <a href="douglasie.html" class="bg-timber text-spruce-deep px-5 py-2 rounded-full hover:bg-white transition">Douglasie →</a>
             </div>
         </div>
@@ -54,6 +55,12 @@
 
     <main class="container mx-auto px-6 py-16">
         
+        <div class="mb-16 flex justify-center">
+            <a href="buche.html" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-gray-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-green-800 shadow-lg">
+                <span class="mr-3 text-2xl">🍃</span> ZUR ROTBUCHE WECHSELN
+            </a>
+        </div>
+
         <section id="vorkommen" class="mb-24">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -69,7 +76,6 @@
                 <div class="relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-timber to-spruce-light rounded-2xl blur opacity-25 group-hover:opacity-50 transition"></div>
                     <div class="relative bg-white p-4 rounded-2xl shadow-2xl">
-                        
                         <p class="text-xs text-center mt-4 text-gray-400 uppercase tracking-widest">Abbildung 1.1: Natürliches Verbreitungsgebiet</p>
                     </div>
                 </div>
@@ -92,7 +98,6 @@
                     <p class="text-gray-700">Hängende Zapfen, 10-15 cm lang. Sie fallen im Ganzen ab (Unterschied zur Tanne, deren Zapfen aufrecht stehen und zerfallen).</p>
                 </div>
             </div>
-            
         </section>
 
         <section id="funktion" class="mb-24 bg-spruce-deep text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
@@ -151,10 +156,15 @@
 
         <div class="text-center py-16 bg-timber/10 rounded-[4rem] border-4 border-dashed border-timber">
             <h3 class="text-3xl font-black text-spruce-deep mb-4 uppercase">Vergleich mit der Alternative</h3>
-            <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Die Douglasie gilt oft als Nachfolgerin der Fichte in Zeiten der Erwärmung. Sehen Sie sich die direkten Unterschiede an.</p>
-            <a href="douglasie.html" class="inline-block bg-spruce-deep text-white text-2xl font-black py-5 px-16 rounded-full shadow-2xl hover:scale-105 transition active:scale-95">
-                KOMPLETTES DOUGLASIEN-DOSSIER ÖFFNEN
-            </a>
+            <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Die Douglasie gilt oft als Nachfolgerin der Fichte in Zeiten der Erwärmung.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="douglasie.html" class="inline-block bg-spruce-deep text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition">
+                    DOUGLASIEN-DOSSIER
+                </a>
+                <a href="buche.html" class="inline-block bg-beech-leaf bg-green-700 text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition">
+                    ZUR ROTBUCHE
+                </a>
+            </div>
         </div>
 
     </main>
@@ -174,8 +184,11 @@
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
